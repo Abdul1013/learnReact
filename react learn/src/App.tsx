@@ -1,10 +1,10 @@
 import Message from "./components/Message";
 import Nav from "./components/Nav";
 import Alert from "./components/Alert";
-import Button from "./components/Button";
+import Button from "./components/AddToCart";
 import OrderAlert from "./components/OrderAlert";
 import { useState } from "react";
-
+ 
 function App() {
   let items = ["Home", "Cart", "Contact", "Profile"];
   const handleSelectItem = (item: string) => {
@@ -19,7 +19,7 @@ function App() {
       <Alert>
         hello <span> world </span>
       </Alert>
-      {orderAlertVisible && <OrderAlert onClose={() => setOrderAlertVisible(false)}></OrderAlert>}
+      {orderAlertVisible && <OrderAlert onClose={() => setOrderAlertVisible(false)} children={undefined}></OrderAlert>}
       <Button color="primary" onClick={() => setOrderAlertVisible(true)}>
         {/* {" "} */}
         Add To Cart
